@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { Personaje } from '../../interfaces/dragon_ball_z.interface';
 import { DragonBallZService } from '../../services/dragon-ball-z.service';
 
@@ -16,16 +16,11 @@ export class AgregarComponent {
 
   constructor(private DragonBallZService: DragonBallZService){}
 
-  // @Output() onAddPersonaje: EventEmitter<Personaje> = new EventEmitter<Personaje>();
-
   addPersonaje(): void {
     //Si al formulario les faltan datos no añadirá un datos a la lista
     if (this.nuevo.nombre.trim().length === 0 || this.nuevo.poder == 0) {
       return;
     }
-
-    //Emite el objeto del tipo Personaje
-    // this.onAddPersonaje.emit(this.nuevo);
 
     this.DragonBallZService.agregarPersonaje(this.nuevo);
 
