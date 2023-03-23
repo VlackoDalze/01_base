@@ -18,7 +18,7 @@ dd {
     font-weight: bold;
 }
 
-button {
+button,input[type="submit"] {
     background-color: black;
     border-radius: 5px;
     border: 0px;
@@ -29,14 +29,28 @@ button {
     padding: 5px 10px;
 }
 
-button:hover {
+button:hover,input[type="submit"]:hover {
     background-color: #3e4144;
 }
 
-button:focus {
+button:focus,input[type="submit"]:focus {
     outline: none;
 }
 
 .p-1 {
     padding: 1px;
+}
+
+.row{
+    display: flex;
+}
+
+.col{
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+input{
+    display: block;
+    margin: 5px;
 }
